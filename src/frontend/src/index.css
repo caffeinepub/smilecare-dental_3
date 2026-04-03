@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300 700;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* SmileCare Dental Brand Colors */
+    /* Primary dark teal: #1F5F66 */
+    --teal: 0.43 0.07 194;
+    /* Accent orange: #C77A3A */
+    --orange: 0.64 0.14 52;
+    /* Background light gray: #F2F5F6 */
+    --bg-gray: 0.97 0.007 214;
+    /* Headings near-black: #1A1A1A */
+    --heading: 0.17 0 0;
+    /* Body text gray: #4B5560 */
+    --body-text: 0.42 0.02 224;
+
+    --background: 0.97 0.007 214;
+    --foreground: 0.17 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.17 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.17 0 0;
+    --primary: 0.43 0.07 194;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.97 0.007 214;
+    --secondary-foreground: 0.17 0 0;
+    --muted: 0.95 0.005 200;
+    --muted-foreground: 0.42 0.02 224;
+    --accent: 0.64 0.14 52;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.9 0.01 200;
+    --input: 0.88 0.01 200;
+    --ring: 0.43 0.07 194;
+    --chart-1: 0.43 0.07 194;
+    --chart-2: 0.64 0.14 52;
+    --chart-3: 0.6 0.118 184.704;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.17 0 0;
+    --sidebar-primary: 0.43 0.07 194;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.97 0.007 214;
+    --sidebar-accent-foreground: 0.17 0 0;
+    --sidebar-border: 0.9 0.01 200;
+    --sidebar-ring: 0.43 0.07 194;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "PlusJakartaSans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-sans-jakarta {
+    font-family: "PlusJakartaSans", system-ui, sans-serif;
+  }
+
+  .text-teal {
+    color: oklch(var(--teal));
+  }
+
+  .bg-teal {
+    background-color: oklch(var(--teal));
+  }
+
+  .text-orange {
+    color: oklch(var(--orange));
+  }
+
+  .bg-orange {
+    background-color: oklch(var(--orange));
+  }
+
+  .text-body {
+    color: oklch(var(--body-text));
+  }
+
+  .text-heading {
+    color: oklch(var(--heading));
+  }
+}
